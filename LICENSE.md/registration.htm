@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml" xml:lang = "en" lang = "en">
+	<head>
+		<meta http-equiv = "Content-Type"
+			content = "text/html; charset = iso-8859-1" />
+		
+		<title>Vidya Registration</title>
+		
+		<!--
+			Vivian McDonald
+			Professor Harris
+			CIS213 Web Client Scripting
+			18 August 2016
+			
+			Final Class Project
+		-->
+		
+		<link href = "styles.css" rel = "stylesheet" type = "text/css" />
+		
+		<script type = "text/javascript">
+			/* <![CDATA[ */
+			
+			function nextField ( startField, destField )
+			{
+				if ( startField.value.length == startField.maxLength )
+				{
+					destField.focus();
+				} // end if
+			}
+			
+			function validateForm()
+			{
+				var a = document.forms["register"]["whichGame"].value;
+				
+				if ( a == null || a == "" )
+				{
+					window.alert ( "Game title must be filled out." );
+					return false;
+				} // end if
+				
+				var b = document.forms["register"]["length"].value;
+				
+				if ( b == null || b == "" )
+				{
+					window.alert ( "Rental length must be selected." );
+					return false;
+				} // end if
+				
+				var c = document.forms["register"]["firstName"].value;
+				
+				if ( c == null || c == "" )
+				{
+					window.alert ( "First name must be filled out." );
+					return false;
+				} // end if
+				
+				var d = document.forms["register"]["lastName"].value;
+				
+				if ( d == null || d == "" )
+				{
+					window.alert ( "Last name must be filled out." );
+					return false;
+				} // end if
+				
+				var e = document.forms["register"]["street"].value;
+				
+				if ( e == null || e == "" )
+				{
+					window.alert ( "Street address, line 1 must be filled out." );
+					return false;
+				} // end if
+				
+				var f = document.forms["register"]["city"].value;
+				
+				if ( f == null || f == "" )
+				{
+					window.alert ( "City must be filled out." );
+					return false;
+				} // end if
+				
+				var g = document.forms["register"]["state"].value;
+				
+				if ( g == null || g == "" )
+				{
+					window.alert ( "State must be selected." );
+					return false;
+				} // end if
+				
+				var h = document.forms["register"]["zip"].value;
+				
+				if ( h == null || h == "" )
+				{
+					window.alert ( "Zip code must be filled out." );
+					return false;
+				} // end if
+				
+				var i = document.forms["register"]["area_code"].value;
+				
+				if ( i == null || i == "" )
+				{
+					window.alert ( "Area code must be filled out." );
+					return false;
+				} // end if
+				
+				var j = document.forms["register"]["exchange"].value;
+				
+				if ( j == null || j == "" )
+				{
+					window.alert ( "The middle three digits of the phone number must be filled out." );
+					return false;
+				} // end if
+				
+				var k = document.forms["register"]["number"].value;
+				
+				if ( k == null || k == "" )
+				{
+					window.alert ( "The last four digits of the phone number must be filled out." );
+					return false;
+				} // end if
+				
+				var l = document.forms["register"]["cardType"].value;
+				
+				if ( l == null || l == "" )
+				{
+					window.alert ( "Credit card type must be selected." );
+					return false;
+				} // end if
+				
+				var m = document.forms["register"]["cardNumber"].value;
+				
+				if ( m == null || m == "" )
+				{
+					window.alert ( "Credit card number must be filled out." );
+					return false;
+				} // end if
+				
+				var n = document.forms["register"]["code"].value;
+				
+				if ( n == null || n == "" )
+				{
+					window.alert ( "Credit card security code must be filled out." );
+					return false;
+				} // end if
+				
+				var o = document.forms["register"]["expMonth"].value;
+				
+				if ( o == null || o == "" )
+				{
+					window.alert ( "Credit card expiration month must be selected." );
+					return false;
+				} // end if
+				
+				var p = document.forms["register"]["expYear"].value;
+				
+				if ( p == null || p == "" )
+				{
+					window.alert ( "Credit card expiration year must be selected." );
+					return false;
+				} // end if
+				
+				if ( !document.getElementsByName('agree').checked )
+				{
+					window.alert ( "You must agree to Vidya's Terms and Conditions." );
+					return false;
+				} // end if
+			}
+			
+			/* ]]> */
+		</script>
+	</head>
+	
+	<body>
+		<div id = "outer">
+			<div id = "main">
+				<input type = "button" value = "VIDYA" title = "VIDYA Home Page" class = "btn"
+					onclick = "location.href = 'index.htm'" />
+				<input type = "button" value = "GAMES" title = "VIDYA Games" class = "btn"
+					onclick = "location.href = 'games.htm'" />
+				<input type = "button" value = "REGISTER" title = "VIDYA Registration" class = "btn" id = "current"
+					onclick = "location.href = 'registration.htm'" />
+
+				<br />
+				<br />
+				<br />
+				
+				<p id = "headsUp">All fields required, unless otherwise stated.</p>
+				
+				<br />
+			
+				<form name = "register" action = "thanks.htm" method = "get" onsubmit="return validateForm()">
+					<h1 class = "impact">Game Information</h1>
+					Game to Rent
+					<br />
+					<input type = "text" name = "whichGame" size = "50" />
+					
+					<br />
+					<br />
+					
+					Rental Length
+					<br />
+					<select name = "length" >
+						<option value= "">How many months?</option>
+						<option value = "one">One Month</option>
+						<option value = "three">Three Months</option>
+						<option value = "six">Six Months</option>
+					</select>
+					
+					<br />
+					<br />
+					
+					<h1 class = "impact">Personal Information</h1>
+					First Name
+					<br />
+					<input type = "text" name = "firstName" size = "50" />
+					<br />
+					<br />
+					
+					Last Name
+					<br />
+					<input type = "text" name = "lastName" size = "50" />
+					
+					<br />
+					<br />
+					
+					Street Address, Line 1
+					<br />
+					<input type = "text" name = "street" size = "50" />
+					<br />
+					<br />
+					
+					Street Address, Line 2 (Optional)
+					<br />
+					<input type = "text" name = "street2" size = "50" />
+					<br />
+					<br />
+					
+					City
+					<br />
+					<input type = "text" name = "city" size = "50" />
+					<br />
+					<br />
+					
+					State
+					<br />
+					<select name = "state" >
+						<option value="">State</option>
+						<option value = "Alaska">AK</option>
+						<option value = "Alabama">AL</option>
+						<option value = "Arkansas">AR</option>
+						<option value = "Arizona">AZ</option>
+						<option value = "California">CA</option>
+						<option value = "Colorado">CO</option>
+						<option value = "Connecticut">CT</option>
+						<option value = "District of Columbia">DC</option>
+						<option value = "Delaware">DE</option>
+						<option value = "Florida">FL</option>
+						<option value = "Georgia">GA</option>
+						<option value = "Hawaii">HI</option>
+						<option value = "Iowa">IA</option>
+						<option value = "Idaho">ID</option>
+						<option value = "Illinois">IL</option>
+						<option value = "Indiana">IN</option>
+						<option value = "Kansas">KS</option>
+						<option value = "Kentucky">KY</option>
+						<option value = "Louisiana">LA</option>
+						<option value = "Massachusetts">MA</option>
+						<option value = "Maryland">MD</option>
+						<option value = "Maine">ME</option>
+						<option value = "Michigan">MI</option>
+						<option value = "Minnesota">MN</option>
+						<option value = "Missouri">MO</option>
+						<option value = "Mississippi">MS</option>
+						<option value = "Montana">MT</option>
+						<option value = "North Carolina">NC</option>
+						<option value = "North Dakota">ND</option>
+						<option value = "Nebraska">NE</option>
+						<option value = "New Hampshire">NH</option>
+						<option value = "New Jersey">NJ</option>
+						<option value = "New Mexico">NM</option>
+						<option value = "Nevada">NV</option>
+						<option value = "New York">NY</option>
+						<option value = "Ohio">OH</option>
+						<option value = "Oklahoma">OK</option>
+						<option value = "Oregon">OR</option>
+						<option value = "Pennsylvania">PA</option>
+						<option value = "Rhode Island">RI</option>
+						<option value = "South Carolina">SC</option>
+						<option value = "South Dakota">SD</option>
+						<option value = "Tennessee">TN</option>
+						<option value = "Texas">TX</option>
+						<option value = "Utah">UT</option>
+						<option value = "Virginia">VA</option>
+						<option value = "Vermont">VT</option>
+						<option value = "Washington">WA</option>
+						<option value = "Wisconsin">WI</option>
+						<option value = "West Virginia">WV</option>
+						<option value = "Wyoming">WY</option>
+					</select>
+					<br />
+					<br />
+					
+					Zip Code
+					<br />
+					<input type = "text" name = "zip" size = "5" maxlength = "5"
+						onkeyup = "nextField ( this, document.forms[0].area_code )" />
+					<br />
+					<br />
+					
+					Phone Number
+					<br />
+					<input type = "text" name = "area_code" size = "4" onkeyup = "nextField ( this, document.forms[0].exchange )"
+						maxlength = "3" />
+					<input type = "text" name = "exchange" size = "4" onkeyup = "nextField ( this, document.forms[0].number )"
+						maxlength = "3" />
+					<input type = "text" name = "number" size = "5" maxlength = "4"
+						onkeyup = "nextField ( this, document.forms[0].cardNumber )" />
+					
+					<br />
+					<br />
+					
+					<h1 class = "impact">Payment Information</h1>
+					
+					Credit Card Type
+					<br />
+					<select name = "cardType" >
+						<option value="">Card Type</option>
+						<option value = "Visa">Visa</option>
+						<option value = "MasterCard">MasterCard</option>
+						<option value = "American Express">American Express</option>
+						<option value = "Discover">Discover</option>
+					</select>
+					<br />
+					<br />
+					
+					Card Number
+					<br />
+					<input type = "text" name = "cardNumber" size = "17" onkeyup = "nextField ( this, document.forms[0].code )"
+						maxlength = "16" />
+					<br />
+					<br />
+					
+					Security Code
+					<br />
+					<input type = "text" name = "code" size = "5" maxlength = "4" />
+					<br />
+					<br />
+					
+					Expiration Date
+					<br />
+					<select name = "expMonth" >
+						<option value = "">Month</option>
+						<option value = "January">01</option>
+						<option value = "February">02</option>
+						<option value = "March">03</option>
+						<option value = "April">04</option>
+						<option value = "May">05</option>
+						<option value = "June">06</option>
+						<option value = "July">07</option>
+						<option value = "August">08</option>
+						<option value = "September">09</option>
+						<option value = "October">10</option>
+						<option value = "November">11</option>
+						<option value = "December">12</option>
+					</select>
+					<select name = "expYear" >
+						<option value = "">Year</option>
+						<option value = "2016">2016</option>
+						<option value = "2017">2017</option>
+						<option value = "2018">2018</option>
+						<option value = "2019">2019</option>
+						<option value = "2020">2020</option>
+						<option value = "2021">2021</option>
+						<option value = "2022">2022</option>
+						<option value = "2023">2023</option>
+						<option value = "2024">2024</option>
+						<option value = "2025">2025</option>
+					</select>
+					
+					<br />
+					<br />
+					
+					<h1 class = "impact">Finish</h1>
+					<input type = "checkbox" name = "agree" value = "yes"></input>I agree to Vidya's Terms and Conditions
+					<br />
+					<br />
+					<input type = "submit" value = "Submit" class = "btn"/>
+				</form>
+			
+			</div>
+			
+			<br />
+			<br />
+			
+		</div>
+	</body>
+</html>

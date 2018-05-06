@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml" xml:lang = "en" lang = "en">
+	<head>
+		<meta http-equiv = "Content-Type"
+			content = "text/html; charset = iso-8859-1" />
+		
+		<title>Vidya Games</title>
+		
+		<!--
+			Vivian McDonald
+			Professor Harris
+			CIS213 Web Client Scripting
+			18 August 2016
+			
+			Final Class Project
+		-->
+		
+		<link href = "styles.css" rel = "stylesheet" type = "text/css" />
+		
+		<script type = "text/javascript">
+			/* <![CDATA[ */
+			
+			var page; // link to game page
+			var winOptions = "toolbar = no, menubar = no, location = yes, scrollbars = yes, resizable = no, width = 500, height = 500"; // window options
+			
+			function showPage ( linkTarget )
+			{
+				page = window.open ( linkTarget, "page", winOptions );
+			}
+			
+			/* ]]> */
+		</script>
+	</head>
+	
+	<body>
+		<div id = "outer">
+			<div id = "main">
+				<input type = "button" value = "VIDYA" title = "VIDYA Home Page" class = "btn"
+					onclick = "location.href = 'index.htm'" />
+				<input type = "button" value = "GAMES" title = "VIDYA Games" class = "btn" id = "current"
+					onclick = "location.href = 'games.htm'" />
+				<input type = "button" value = "REGISTER" title = "VIDYA Registration" class = "btn"
+					onclick = "location.href = 'registration.htm'" />
+
+				<br />
+				<br />
+				<br />
+				
+				<p id = "headsUp">Click a game to see more information.</p>
+				
+				<br />
+				
+				<h1 class = "leftAlign">Top Games of 2016</h1>
+				
+				<img src = "darksouls3.jpg" alt = "Dark Souls 3" title = "Dark Souls 3" class = "gridLeft"
+					onmouseover = "this.src = 'darksouls3alt.jpg'"
+					onmouseout = "this.src = 'darksouls3.jpg'"
+					onclick = "showPage ( 'darksouls3.htm' ); return false" />
+				<img src = "overwatch.jpg" alt = "Overwatch" title = "Overwatch" class = "grid"
+					onmouseover = "this.src = 'overwatchalt.jpg'"
+					onmouseout = "this.src = 'overwatch.jpg'"
+					onclick = "showPage ( 'overwatch.htm' ); return false" />
+				<img src = "doom.jpg" alt = "Doom" title = "Doom" class = "grid"
+					onmouseover = "this.src = 'doomalt.png'"
+					onmouseout = "this.src = 'doom.jpg'"
+					onclick = "showPage ( 'doom.htm' ); return false" />
+				<img src = "nms.jpg" alt = "No Man's Sky" title = "No Man's Sky" class = "grid"
+					onmouseover = "this.src = 'nmsalt.jpg'"
+					onmouseout = "this.src = 'nms.jpg'"
+					onclick = "showPage ( 'nms.htm' ); return false" />
+				<img src = "mirror.jpg" alt = "Mirror's Edge Catalyst" title = "Mirror's Edge Catalyst" class = "gridRight"
+					onmouseover = "this.src = 'mirroralt.jpg'"
+					onmouseout = "this.src = 'mirror.jpg'"
+					onclick = "showPage ( 'mirror.htm' ); return false" />
+				
+				<h1 class = "leftAlign">Retro Games</h1>
+				
+				<img src = "sm64.png" alt = "Super Mario 64" title = "Super Mario 64" class = "gridLeft"
+					onmouseover = "this.src = 'sm64alt.jpg'"
+					onmouseout = "this.src = 'sm64.png'"
+					onclick = "showPage ( 'sm64.htm' ); return false" />
+				<img src = "zelda.jpg" alt = "The Legend of Zelda: A Link to the Past"
+					title = "The Legend of Zelda: A Link to the Past" class = "grid"
+					onmouseover = "this.src = 'zeldaalt.png'"
+					onmouseout = "this.src = 'zelda.jpg'"
+					onclick = "showPage ( 'zelda.htm' ); return false" />
+				<img src = "supermetroid.jpg" alt = "Super Metroid" title = "Super Metroid" class = "grid"
+					onmouseover = "this.src = 'supermetroidalt.jpg'"
+					onmouseout = "this.src = 'supermetroid.jpg'"
+					onclick = "showPage ( 'supermetroid.htm' ); return false" />
+				<img src = "mk64.jpg" alt = "Mario Kart 64" title = "Mario Kart 64" class = "grid"
+					onmouseover = "this.src = 'mk64alt.jpg'"
+					onmouseout = "this.src = 'mk64.jpg'"
+					onclick = "showPage ( 'mk64.htm' ); return false" />
+				<img src = "sonic.png" alt = "Sonic the Hedgehog 2" title = "Sonic the Hedgehog 2" class = "gridLeft"
+					onmouseover = "this.src = 'sonicalt.jpg'"
+					onmouseout = "this.src = 'sonic.png'"
+					onclick = "showPage ( 'sonic.htm' ); return false" />
+				
+				<h1 class = "leftAlign">Last Year's Top Games</h1>
+				
+				<img src = "fallout.jpg" alt = "Fallout 4" title = "Fallout 4" class = "gridLeft"
+					onmouseover = "this.src = 'falloutalt.png'"
+					onmouseout = "this.src = 'fallout.jpg'"
+					onclick = "showPage ( 'fallout.htm' ); return false" />
+				<img src = "battlefront.jpg" alt = "Star Wars Battlefront" title = "Star Wars Battlefront" class = "grid"
+					onmouseover = "this.src = 'battlefrontalt.jpg'"
+					onmouseout = "this.src = 'battlefront.jpg'"
+					onclick = "showPage ( 'battlefront.htm' ); return false" />
+				<img src = "bloodborne.jpg" alt = "Bloodborne" title = "Bloodborne" class = "grid"
+					onmouseover = "this.src = 'bloodbornealt.jpg'"
+					onmouseout = "this.src = 'bloodborne.jpg'"
+					onclick = "showPage ( 'bloodborne.htm' ); return false" />
+				<img src = "halo5.jpg" alt = "Halo 5" title = "Halo 5" class = "grid"
+					onmouseover = "this.src = 'halo5alt.jpg'"
+					onmouseout = "this.src = 'halo5.jpg'"
+					onclick = "showPage ( 'halo5.htm' ); return false" />
+				<img src = "smm.jpg" alt = "Super Mario Maker" title = "Super Mario Maker" class = "gridRight"
+					onmouseover = "this.src = 'smmalt.jpg'"
+					onmouseout = "this.src = 'smm.jpg'"
+					onclick = "showPage ( 'smm.htm' ); return false" />
+				
+				<br />
+				<br />
+				
+				<input type = "button" value = "Rent a Game" title = "Rent a Game" class = "btn" id = "bigButton"
+					onclick = "location.href = 'registration.htm'" />
+			
+			</div>
+			
+			<br />
+			<br />
+			
+		</div>
+	</body>
+</html>

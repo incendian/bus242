@@ -1,0 +1,121 @@
+html
+{
+	height: 100%;
+}
+
+body
+{
+	background-image: url("background.jpg");
+	background-repeat: repeat-y;
+	background-size: 100% 100%;
+	font-size: 12pt;
+	font-family: Impact, Verdana, Arial, sans-serif, serif;
+	text-align: center;
+}
+
+#outer
+{
+	background-color: white;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid black;
+}
+
+#main
+{
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input.btn
+{
+	background: #1853B9;
+	color: #F6F9F8;
+	font-size: 16pt;
+	font-family: Impact, Verdana, Arial, sans-serif, serif;
+	width: 33%;
+	padding: 5px 10px 5px 10px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	margin-top: 10px;
+}
+
+input.btn:hover, #current
+{
+	background: #223A7A;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.highlights
+{
+	width: 100%;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.txtbox
+{
+	width: 680px;
+	background-color: #A1CDEC;
+	padding: 5px 10px 5px 10px;
+}
+
+h1
+{
+	font-size: 24pt;
+}
+
+h2
+{
+	font-size: 16pt;
+}
+
+.grid
+{
+	width: 130px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.gridLeft, .gridRight
+{
+	width: 130px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+form, .smooth
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.impact
+{
+	font-family: Impact, Verdana, Arial, sans-serif, serif;
+}
+
+#headsUp
+{
+	font-style: italic;
+	font-weight: bold;
+	text-align: left;
+}
+
+.leftAlign, form
+{
+	text-align: left;
+}
+
+#bigButton
+{
+	width: 100%;
+}
+
+.smooth
+{
+	background-color: white;
+	padding: 20px 10px 20px 10px;
+}
