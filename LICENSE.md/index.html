@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml" xml:lang = "en" lang = "en">
+	<head>
+		<meta http-equiv = "Content-Type"
+			content = "text/html; charset = iso-8859-1" />
+		
+		<title>Vidya Home Page</title>
+		
+		<!--
+			Vivian McDonald
+			Professor Harris
+			CIS213 Web Client Scripting
+			18 August 2016
+			
+			Final Class Project
+		-->
+		
+		<link href = "styles.css" rel = "stylesheet" type = "text/css" />
+		
+		<script type = "text/javascript">
+			/* <![CDATA[ */
+			
+			var currImage = 1; // set current image to first
+			
+			function changeImage()
+			{
+				if ( currImage == 2 )
+				{
+					document.images[0].src = "overwatch.jpg";
+					++currImage; // increment counter
+				} // end if
+				
+				else if ( currImage == 3 )
+				{
+					document.images[0].src = "doom.jpg";
+					++currImage; // increment counter
+				} // end else if
+				
+				else if ( currImage == 4 )
+				{
+					document.images[0].src = "nms.jpg";
+					++currImage; // increment counter
+				} // end else if
+				
+				else if ( currImage == 5 )
+				{
+					document.images[0].src = "mirror.jpg";
+					currImage = 1; // reset counter
+				} // end else if
+				
+				else if ( currImage == 1 )
+				{
+					document.images[0].src = "darksouls3.jpg";
+					++currImage; // increment counter
+				} // end else if
+			}
+			
+			/* ]]> */
+		</script>
+	</head>
+	
+	<body onload = "var begin = setInterval ( 'changeImage()', 3000 );">
+		<div id = "outer">
+			<div id = "main">
+				<input type = "button" value = "VIDYA" title = "VIDYA Home Page" class = "btn" id = "current"
+					onclick = "location.href = 'index.htm'" />
+				<input type = "button" value = "GAMES" title = "VIDYA Games" class = "btn"
+					onclick = "location.href = 'games.htm'" />
+				<input type = "button" value = "REGISTER" title = "VIDYA Registration" class = "btn"
+					onclick = "location.href = 'registration.htm'" />
+
+				<img src = "darksouls3.jpg" alt = "Dark Souls 3" class = "highlights" />
+			
+				<div class = "txtbox">
+					<h1>Sign up now to get your first month 50% off!</h1>
+					<h2>Refer a friend to get another month 50% off!</h2>
+				</div>
+				
+				<br />
+				<br />
+				
+				<address>Vidya Inc., 123 Main Street, Virginia Beach, VA 23462</address>
+			
+			</div>
+			
+			<br />
+			<br />
+			
+		</div>
+		
+		<p>
+			<a href="http://validator.w3.org/check?uri=referer"><img
+				src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
+		</p>
+
+	</body>
+</html>
